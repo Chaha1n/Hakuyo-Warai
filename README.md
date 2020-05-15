@@ -4,6 +4,10 @@
 - index.html
 - index.js
 - index.css  
+- img
+  - img1
+  - img2
+    ...
 おわり  
 issueは好きに建てる  
 issueは取りたい人が勝手に取る、**必ず**自分をアサインする(複数人が並行してしまわないように)  
