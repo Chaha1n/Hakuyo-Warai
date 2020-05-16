@@ -13,19 +13,22 @@ window.onload = () => {
      */
     function setImage(ctx,path,x,y) {
         const img = new Image();
-        img.crossOrigin = "anonymous"
+        //img.crossOrigin = "anonymous"
         img.src = "./img/" + path + ".png";
         img.onload = () => {
             ctx.drawImage(img,x,y);
         }
     }
-    setImage(ctx, "beak", 0, 0);
-    setImage(ctx, "body", 0, 0);
-    setImage(ctx, "eye", 0, 0);
-    setImage(ctx, "eye", 0, 0);
-    setImage(ctx, "Splash", 0, 0);
-    setImage(ctx, "stomach", 0, 0);
-    setImage(ctx, "Tosaka", 0, 0);
+    function makePosition(){
+        var xy = Math.round(Math.random()*410);
+        return xy;
+    }
+    setImage(ctx, "beak", makePosition(), makePosition());
+    setImage(ctx, "body", makePosition(), makePosition());
+    setImage(ctx, "eye", makePosition(), makePosition());
+    setImage(ctx, "Splash", makePosition(), makePosition());
+    setImage(ctx, "stomach", makePosition(), makePosition());
+    setImage(ctx, "Tosaka", makePosition(), makePosition());
 }
 
 // 画像を生成する関数
