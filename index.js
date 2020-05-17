@@ -16,6 +16,8 @@ window.onload = () => {
         const url = "./img/" + path + ".png";
         fabric.Image.fromURL(url, function (oImg) {
             oImg.set({
+                left: x,                    // x座標指定
+                top:y,                      // y座標指定
                 hasRotatingPoint: false,    // 回転無効
                 lockScalingFlip: true,      // 裏返し無効
                 hasControls: false          //拡大縮小無効
