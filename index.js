@@ -7,6 +7,21 @@ window.onload = () => {
     // 保存ボタンは非表示
     document.getElementById("save").style.display ="none";
     const canvas = new fabric.Canvas('Canvas1');
+    // canvasの幅、高さを取得
+    const cs = document.getElementById("Canvas1");
+    const c_side = cs.clientWidth;
+    console.log(c_side)
+
+    // 白背景を描画
+    var back = new fabric.Rect({ 
+        fill: '#fff', 
+        top: 0, 
+        left: 0,
+        width: c_side,
+        height: c_side
+    }); 
+    back.selectable = false;
+    canvas.add(back);
     //グループ選択無効化
     canvas.selection = false;
     //画像データの読み込み
