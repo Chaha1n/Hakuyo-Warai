@@ -1,4 +1,9 @@
 window.onload = () => {
+    function handleTouchMove(event) {
+        event.preventDefault();
+    }
+    //スクロール禁止
+    document.addEventListener('touchmove', handleTouchMove, { passive: false });
     // 保存ボタンは非表示
     document.getElementById("save").style.display ="none";
     const canvas = new fabric.Canvas('Canvas1');
