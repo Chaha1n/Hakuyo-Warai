@@ -1,12 +1,23 @@
 window.onload = () => {
-    function handleTouchMove(event) {
-        event.preventDefault();
-    }
-    //スクロール禁止
-    document.addEventListener('touchmove', handleTouchMove, { passive: false });
     // 保存ボタンは非表示
     document.getElementById("save").style.display ="none";
     const canvas = new fabric.Canvas('Canvas1');
+
+    // canvasの幅、高さを取得
+    const cs = document.getElementById("Canvas1");
+    const c_side = cs.clientWidth;
+    console.log(c_side)
+
+    // 白背景を描画
+    var back = new fabric.Rect({ 
+        fill: '#fff', 
+        top: 0, 
+        left: 0,
+        width: c_side,
+        height: c_side
+    }); 
+    back.selectable = false;
+    canvas.add(back);
     //グループ選択無効化
     canvas.selection = false;
     //画像データの読み込み
@@ -44,9 +55,10 @@ window.onload = () => {
 
 // 画像を生成する関数
 function make_img() {
-    // キャンパス要素を取得
-    var canvas = document.getElementById('Canvas1');
-  
+
+    // canvas要素を取得
+    const canvas = document.getElementById('Canvas1');
+
     // 描画内容をデータURIに変換(PNG)
     var dataURI = canvas.toDataURL();
   
