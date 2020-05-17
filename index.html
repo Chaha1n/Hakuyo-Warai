@@ -5,26 +5,34 @@
 	<meta charset="utf-8">
 	<meta name="description" content="ハクヨウを笑顔にするプロジェクト">
 	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
-	<meta name="twitter:card" content="summary_large_image" /> <!--TwitterCardの種類-->
-	<meta property="og:url" content="https://hakuyo-warai.now.sh/" /> <!--URL-->
-	<meta property="og:title" content="Hakuyo-Warai" /> <!--title-->
-	<meta property="og:description" content="ハクヨウを笑顔にするプロジェクト" /> <!--subtitle-->
-	<meta property="og:image" id="img-card" content="https://hakuyo-warai.now.sh/img/icon.png" /> <!--画像URL-->
+	<meta name="twitter:card" content="summary_large_image" />
+	<!--TwitterCardの種類-->
+	<meta property="og:url" content="https://hakuyo-warai.now.sh/" />
+	<!--URL-->
+	<meta property="og:title" content="Hakuyo-Warai" />
+	<!--title-->
+	<meta property="og:description" content="ハクヨウを笑顔にするプロジェクト" />
+	<!--subtitle-->
+	<meta property="og:image" id="img-card" content="https://hakuyo-warai.now.sh/img/icon.png" />
+	<!--画像URL-->
 	<title>Hakuyo-Warai</title>
 	<link rel="shortcut icon" href="favicon.ico">
 	<link rel="stylesheet" type="text/css" href="index.css">
 	<script src="index.js"></script>
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/1.5.0/fabric.min.js"></script>
 
 </head>
 
 <body>
 	<dl>お手本</dl><img src="./img/icon.png" width="20%" height="20%">
-	<div style="padding: 10px; margin-bottom: 10px; border: 1px solid #333333; background-color:#e8e8e8; width:460; height:460" >
-	<canvas id = "Canvas1" width="460" height ="460">
-	</canvas>
+	<div
+		style="padding: 10px; margin-bottom: 10px; border: 1px solid #333333; background-color:#e8e8e8; width:460; height:460">
+		<canvas id='Canvas1' width="460" height="460">
+		</canvas>
 	</div>
 	<img id="img-hakuyo" src="" alt="">
 	<input id="make" type="button" value="画像を生成" onclick="make_img()">
