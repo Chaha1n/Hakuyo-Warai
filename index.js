@@ -2,6 +2,8 @@ window.onload = () => {
     // 保存ボタンは非表示
     document.getElementById("save").style.display ="none";
     const canvas = new fabric.Canvas('Canvas1');
+    //グループ選択無効化
+    canvas.selection = false;
     //画像データの読み込み
     /** 
     *受け取った画像をキャンバスに描画する
@@ -13,6 +15,11 @@ window.onload = () => {
         //img.crossOrigin = "anonymous"
         const url = "./img/" + path + ".png";
         fabric.Image.fromURL(url, function (oImg) {
+            oImg.set({
+                hasRotatingPoint: false,    // 回転無効
+                lockScalingFlip: true,      // 裏返し無効
+                hasControls: false          //拡大縮小無効
+            });
             canvas.add(oImg);
         })
     }
