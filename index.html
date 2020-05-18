@@ -13,7 +13,7 @@
 	<!--title-->
 	<meta property="og:description" content="ハクヨウを笑顔にするプロジェクト" />
 	<!--subtitle-->
-	<meta property="og:image" id="img-card" content="https://hakuyo-warai.now.sh/img/icon.png" />
+	<meta property="og:image" id="img-card" content="https://hakuyo-warai.now.sh/eye-catching.png" />
 	<!--画像URL-->
 	<title>Hakuyo-Warai</title>
 	<link rel="shortcut icon" href="favicon.ico">
@@ -37,9 +37,8 @@
 		</a>
 	</dev>
 	<dl>お手本</dl><img src="./img/icon.png" width="20%" height="20%">
-	<div style="width:460px; height:460px; padding: 10px; margin-bottom: 10px; border: 1px solid #333333; background-color:#e8e8e8;">
-		<canvas id='Canvas1' width="460" height="460">
-		</canvas>
+	<div id="canvas-wrapper" style="max-width: 100%; width:460px; height: auto; padding: 10px; margin-bottom: 10px; border: 1px solid #333333; background-color:#e8e8e8;">
+		<canvas id='Canvas1' width="" height=""></canvas>
 	</div>
 	<img id="img-hakuyo" src="" alt="">
 	<input id="make" type="button" value="画像を生成" onclick="make_img()">

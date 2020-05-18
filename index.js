@@ -4,10 +4,14 @@ window.onload = () => {
     // 保存ボタンは非表示
     document.getElementById("save").style.display ="none";
     const canvas = new fabric.Canvas('Canvas1');
+    // canvas-wrapperの幅を取得し、Canvasの大きさを決定
+    const cw = document.getElementById("canvas-wrapper");
+    canvas.setWidth(cw.clientWidth-20);
+    canvas.setHeight(cw.clientWidth-20);
     // canvasの幅、高さを取得
-    const cs = document.getElementById("Canvas1");
-    const c_side = cs.clientWidth;
-    console.log(c_side)
+    const c_side = canvas.width;
+    console.log(canvas.width)
+    console.log(cw.clientWidth)
 
     // 白背景を描画
     var back = new fabric.Rect({ 
@@ -43,11 +47,11 @@ window.onload = () => {
         })
     }
     function makePosition(){
-        var xy = Math.round(Math.random()*410);
+        var xy = Math.round(Math.random()*c_side-50);
         return xy;
     }
     setImage("beak", makePosition(), makePosition());
-    setImage( "body", makePosition(), makePosition());
+    setImage("body", makePosition(), makePosition());
     setImage("eye", makePosition(), makePosition());
     setImage("Splash", makePosition(), makePosition());
     setImage("stomach", makePosition(), makePosition());
