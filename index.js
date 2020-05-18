@@ -1,7 +1,4 @@
 window.onload = () => {
-    function handleTouchMove(event) {
-        event.preventDefault();
-    }
     //スクロール禁止
     document.addEventListener('touchmove', handleTouchMove, { passive: false });
     // 保存ボタンは非表示
@@ -56,10 +53,15 @@ window.onload = () => {
     setImage("stomach", makePosition(), makePosition());
     setImage("Tosaka", makePosition(), makePosition());
 }
+//タッチの無効化/有効化を操作する関数
+function handleTouchMove(event) {
+    event.preventDefault();
+}
 
 // 画像を生成する関数
 function make_img() {
-
+    //タッチ無効化を解除
+    document.removeEventListener('touchmove', handleTouchMove, { passive: false });
     // canvas要素を取得
     const canvas = document.getElementById('Canvas1');
 
