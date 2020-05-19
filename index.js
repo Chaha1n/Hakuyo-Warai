@@ -1,9 +1,10 @@
+var canvas;
 window.onload = () => {
     //スクロール禁止
     document.addEventListener('touchmove', handleTouchMove, { passive: false });
     // 保存ボタンは非表示
     document.getElementById("save").style.display ="none";
-    const canvas = new fabric.Canvas('Canvas1');
+    canvas = new fabric.Canvas('Canvas1');
     // canvas-wrapperの幅を取得し、Canvasの大きさを決定
     const cw = document.getElementById("canvas-wrapper");
     canvas.setWidth(cw.clientWidth-20);
@@ -64,17 +65,14 @@ function handleTouchMove(event) {
 
 // 画像を生成する関数
 function make_img() {
+    //選択を解除
+    canvas.discardActiveObject();
     //タッチ無効化を解除
     document.removeEventListener('touchmove', handleTouchMove, { passive: false });
-    // canvas要素を取得
-    const canvas = document.getElementById('Canvas1');
-
     // 描画内容をデータURIに変換(PNG)
     var dataURI = canvas.toDataURL();
-  
     // img要素を取得
     var image = document.getElementById("img-hakuyo");
-  
     // データURIをimg要素のsrc属性に指定
     image.src = dataURI;
 
