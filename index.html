@@ -28,21 +28,34 @@
 </head>
 
 <body>
-	<dev class="share" style="float: right;">
-		<a href="https://twitter.com/share?url=https://hakuyo-warai.now.sh/&amp;text=ハクヨウを笑わせよう%0A" target="_blank" style="text-decoration: none;">
-			<img src="./img/Twitter.png" width="40px" height="40px" alt="シェア">
-		</a>
-		<a href="https://www.facebook.com/share.php?u=https://hakuyo-warai.now.sh/&amp;text=テスト" target="_blank" style="text-decoration: none;">
-			<img src="./img/facebook.png" width="40px" height="40px" alt="シェア">
-		</a>
-	</dev>
-	<dl>お手本</dl><img src="./img/icon.png" width="20%" height="20%">
-	<div id="canvas-wrapper" style="max-width: 100%; width:460px; height: auto; padding: 10px; margin-bottom: 10px; border: 1px solid #333333; background-color:#e8e8e8;">
-		<canvas id='Canvas1' width="" height=""></canvas>
-	</div>
-	<img id="img-hakuyo" src="" alt="">
-	<input id="make" type="button" value="画像を生成" onclick="make_img()">
-	<a id="save" href="" download="hakuyo-warai.png">画像を保存</a>
+	<header>
+		<div class="header-inner">
+			<div class="logo">
+				<img src="./eye-catching.png" alt="">
+				<h1>Hakuyo-Warai</h1>
+			</div>
+			<div class="share">
+				<a href="https://twitter.com/share?url=https://hakuyo-warai.now.sh/&amp;text=ハクヨウを笑わせよう%0A"
+					target="_blank" style="text-decoration: none;">
+					<img src="./img/Twitter.png" width="40px" height="40px" alt="シェア">
+				</a>
+				<a href="https://www.facebook.com/share.php?u=https://hakuyo-warai.now.sh/&amp;text=テスト" target="_blank"
+					style="text-decoration: none;">
+					<img src="./img/facebook.png" width="40px" height="40px" alt="シェア">
+				</a>
+			</div>
+		</div>
+	</header>
+	<main>
+		<dl>お手本</dl><img src="./img/icon.png" width="20%" height="20%">
+		<div id="canvas-wrapper"
+			style="max-width: 100%; width:460px; height: auto; padding: 10px; margin-bottom: 10px; border: 1px solid #333333; background-color:#e8e8e8;">
+			<canvas id='Canvas1' width="" height=""></canvas>
+		</div>
+		<img id="img-hakuyo" src="" alt="">
+		<input id="make" type="button" value="画像を生成" onclick="make_img()">
+		<a id="save" href="" download="hakuyo-warai.png">画像を保存</a>
+	</main>
 </body>
 
 </html>

@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+}
+header {
+    background: #2d2d2d;
+}
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header img {
+    width: 50px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+header h1 {
+    color: #fff;
+    font-weight: normal;
+    display: inline;
+    vertical-align: middle;
+}
+@media only screen and (max-width:450px){
+    header h1 {
+        font-size: 25px;
+    }
+    .share img{
+        width: 35px;
+        height: auto;
+    }
+}
+.logo {
+    margin: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.share {
+    margin: 10px;
+    display: inline-block;
+}
+main {
+    margin: 8px;
+}
