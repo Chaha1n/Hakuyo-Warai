@@ -81,10 +81,3 @@ function make_img() {
     // 保存ボタンの表示
     document.getElementById("save").style.display ="block";
 }
-//glayLayerがクリックされたら
-$("#glayLayer").click(function(){
-    //glayLayerを消す
-    $(this).hide();
-    //overLayerを消す
-    $("#overLayer").hide();
-});
