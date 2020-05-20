@@ -94,9 +94,30 @@ main {
     display: inline-block;
     background: orange;
 }
-#save {
+.btn-text {
     line-height: 50px;
     font-size: 25px;
     text-decoration: none;
     color: #fff;
+}
+.make-btn {
+    margin: 10px;
+}
+#mobile {
+    display: none;
+}
+@media only screen and (max-width:500px){
+    #PC {
+        display: none;
+    }
+    #mobile {
+        display: block;
+    }
+    .make-btn {
+        margin: 10px 10px 10px 60px;
+        float: left;
+    }
+    .model {
+        float: left;
+    }
 }
