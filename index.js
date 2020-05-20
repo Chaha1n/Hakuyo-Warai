@@ -11,8 +11,6 @@ window.onload = () => {
     canvas.setHeight(cw.clientWidth-20);
     // canvasの幅、高さを取得
     const c_side = canvas.width;
-    console.log(canvas.width)
-    console.log(cw.clientWidth)
 
     // 白背景を描画
     var back = new fabric.Rect({ 
@@ -34,7 +32,6 @@ window.onload = () => {
     * @param {y} 左上のy座標(px)
      */
     function setImage(path,x,y) {
-        //img.crossOrigin = "anonymous"
         const url = "./img/" + path + ".png";
         fabric.Image.fromURL(url, function (oImg) {
             oImg.set({
@@ -72,15 +69,15 @@ function make_img() {
     var image = document.getElementById("img-hakuyo");
     // データURIをimg要素のsrc属性に指定
     image.src = dataURI;
-
     // 生成ボタンの非表示
     document.getElementById("make").style.display ="none";
-
+    // glayLayerを表示する
+    document.getElementById("glayLayer").style.display ="block";
+    // overLayerを表示する
+    document.getElementById("overLayer").style.display ="block";
     // 保存ボタンに画像リンクを設定
     var save = document.getElementById("save");
     save.href = dataURI;
-
     // 保存ボタンの表示
     document.getElementById("save").style.display ="block";
-    
 }
