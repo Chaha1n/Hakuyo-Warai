@@ -1,0 +1,12 @@
+{
+    "name": "Hakuyo-Warai",
+    "short_name": "ハクヨウ笑",
+    "icons": [
+        {
+            "src": "eye-catching.png",
+            "sizes": "400x400",
+            "type": "image/png"
+        }
+    ],
+    "display": "standalone"
+}
