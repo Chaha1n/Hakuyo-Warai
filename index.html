@@ -45,18 +45,23 @@
 		</div>
 	</header>
 	<main>
-		<dl>お手本</dl><img src="./img/icon.png" width="20%" height="20%">
+		<img class="model" src="./img/icon.png" width="20%" height="20%">
+		<div class="button make-btn" id="mobile" style="background: green;">
+			<a id="make" class="btn-text" onclick="make_img()"><i class="far fa-image"></i> Make Image</a>
+		</div>
 		<div id="canvas-wrapper"
-			style="max-width: 100%; width:460px; height: auto; padding: 10px; margin-bottom: 10px; border: 1px solid #333333; background-color:#e8e8e8;">
+			style="clear: both; max-width: 100%; width:460px; height: auto; padding: 10px; margin-bottom: 10px; border: 1px solid #333333; background-color:#e8e8e8;">
 			<canvas id='Canvas1' width="" height=""></canvas>
 		</div>
-		<input id="make" type="button" value="画像を生成" onclick="make_img()">
+		<div class="button make-btn" id="PC" style="background: green;">
+			<a id="make" class="btn-text" onclick="make_img()"><i class="far fa-image"></i> Make Image</a>
+		</div>
 		<div id="glayLayer"></div>
 		<div id="overLayer">
 			<img id="img-hakuyo"　src="" alt="">
 			<div class="menu">
-				<div class="button">
-					<a id="save" href="" download="hakuyo-warai.png"><i class="fas fa-file-download"></i> Download</a>
+				<div class="button" style="background: orange;">
+					<a id="save" class="btn-text" href="" download="hakuyo-warai.png"><i class="fas fa-file-download"></i> Download</a>
 				</div>
 				<div class="share">
 					<a href="https://twitter.com/share?url=https://hakuyo-warai.now.sh/&amp;text=ハクヨウを笑わせよう%0A"
@@ -71,6 +76,9 @@
 			</div>
 		</div>
 	</main>
+	<footer>
+		<small>Copyright &copy; 2020 Hakuyo-Warai</small>
+	</footer>
 </body>
 
 </html>
