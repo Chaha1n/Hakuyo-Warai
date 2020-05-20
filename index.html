@@ -17,14 +17,11 @@
 	<!--画像URL-->
 	<title>Hakuyo-Warai</title>
 	<link rel="shortcut icon" href="favicon.ico">
-	<link rel="stylesheet" type="text/css" href="index.css">
-	<script src="index.js"></script>
+	<link rel="stylesheet" href="./index.css">
+	<link href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" rel="stylesheet">
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-	<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
-	<script
-		src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+	<script src="index.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/1.5.0/fabric.min.js"></script>
-
 </head>
 
 <body>
@@ -37,11 +34,11 @@
 			<div class="share">
 				<a href="https://twitter.com/share?url=https://hakuyo-warai.now.sh/&amp;text=ハクヨウを笑わせよう%0A"
 					target="_blank" style="text-decoration: none;">
-					<img src="./img/Twitter.png" width="40px" height="40px" alt="シェア">
+					<img src="./img/Twitter.png" alt="シェア">
 				</a>
 				<a href="https://www.facebook.com/share.php?u=https://hakuyo-warai.now.sh/&amp;text=テスト" target="_blank"
 					style="text-decoration: none;">
-					<img src="./img/facebook.png" width="40px" height="40px" alt="シェア">
+					<img src="./img/facebook.png" alt="シェア">
 				</a>
 			</div>
 		</div>
@@ -52,9 +49,26 @@
 			style="max-width: 100%; width:460px; height: auto; padding: 10px; margin-bottom: 10px; border: 1px solid #333333; background-color:#e8e8e8;">
 			<canvas id='Canvas1' width="" height=""></canvas>
 		</div>
-		<img id="img-hakuyo" src="" alt="">
 		<input id="make" type="button" value="画像を生成" onclick="make_img()">
-		<a id="save" href="" download="hakuyo-warai.png">画像を保存</a>
+		<div id="glayLayer"></div>
+		<div id="overLayer">
+			<img id="img-hakuyo"　src="" alt="">
+			<div class="menu">
+				<div class="button">
+					<a id="save" href="" download="hakuyo-warai.png"><i class="fas fa-file-download"></i> Download</a>
+				</div>
+				<div class="share">
+					<a href="https://twitter.com/share?url=https://hakuyo-warai.now.sh/&amp;text=ハクヨウを笑わせよう%0A"
+						target="_blank" style="text-decoration: none;">
+						<img src="./img/Twitter.png" alt="シェア">
+					</a>
+					<a href="https://www.facebook.com/share.php?u=https://hakuyo-warai.now.sh/&amp;text=テスト" target="_blank"
+						style="text-decoration: none;">
+						<img src="./img/facebook.png" alt="シェア">
+					</a>
+				</div>
+			</div>
+		</div>
 	</main>
 </body>
 
